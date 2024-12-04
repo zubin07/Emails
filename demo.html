@@ -45,6 +45,9 @@
         object-fit: cover;
       }
       /* Reusable Classes */
+      .padding-3-48 {
+        padding: 48px 0 0 48px;
+      }
       .padding-48 {
         padding: 48px;
       }
@@ -116,27 +119,40 @@
         background: #f1f1f1;
         padding: 16px;
       }
+      .card-2 {
+        width: 323px;
+        border-radius: 8px;
+        background: #f1f1f1;
+        padding: 16px;
+      }
       .card-img {
-        width: 100%;
-        height: 44px;
+        width: 32px;
+        height: 32px;
         object-fit: contain;
       }
-      .card-title {
-        margin-top: 10px;
-        padding: 0 33px;
 
-        text-align: center;
-        letter-spacing: 0.15px;
+      .hide-on-desktop {
+        display: none !important;
       }
-
-      /* Responsive Styling */
+      .link {
+        color: #75dbff;
+      }
+      .w-65 {
+        width: 435px;
+      }
+      .top-right-img {
+        top: 0;
+        right: 0;
+        width: 347px;
+        height: 459px;
+      }
       @media only screen and (max-width: 600px) {
         .logo {
           width: 200px !important;
           height: 120px !important;
         }
         .font-size-34 {
-          font-size: 25px !important;
+          font-size: 28px !important;
         }
 
         .content-table {
@@ -152,18 +168,37 @@
         }
 
         .button {
-          padding: 10px 22px !important;
+          padding: 12px 22px !important;
           display: table-cell !important;
           width: 100% !important;
         }
-        .card-title {
-          padding: 0 33px;
+        .hide-on-desktop {
+          display: none !important;
         }
       }
       /* Responsive Styling */
       @media only screen and (max-width: 400px) {
+        .w-65 {
+          width: 100%;
+        }
+        .hide-on-desktop {
+          display: block !important;
+        }
         .hide-on-small {
           display: none;
+        }
+        .visible-desktop {
+          display: none;
+        }
+        .left-section {
+          width: 100%;
+        }
+        .right-section {
+          width: 202px;
+        }
+        .mobileImg {
+          width: 202px;
+          height: 267px;
         }
         .grid-col {
           width: 100% !important; /* Stacks the columns on smaller screens */
@@ -190,11 +225,15 @@
 
         .button {
           display: table-cell !important;
-          width: 133px !important;
+          width: 85% !important;
           text-align: center !important;
         }
-        .card-title {
-          padding: 0 34px;
+
+        .card-2 {
+          padding: 12px 14px;
+        }
+        .mt-12 {
+          /* margin-top: 12px; */
         }
       }
     </style>
@@ -209,16 +248,16 @@
       cellpadding="0"
       border="0"
     >
-      <tr>
+      <tr style="position: relative">
         <td class="padding-48">
           <!-- Main Container -->
+
           <table
             width="600"
             bgcolor="#002394"
             cellpadding="0"
             cellspacing="0"
             role="presentation"
-            class="content-table"
           >
             <tr>
               <td>
@@ -232,26 +271,29 @@
             </tr>
             <tr>
               <td>
-                <!-- Content Section -->
                 <h1
-                  class="font-size-34 font-weight-400 line-height-42 margin-bottom-24 whiteColor"
+                  class="w-65 font-size-34 font-weight-400 line-height-42 margin-bottom-24 whiteColor"
                 >
-                  Get the Most Out of the Apex Auto App
+                  Account Created - Apex Auto
                 </h1>
+
                 <p
-                  class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 whiteColor"
+                  class="w-65 font-size-16 font-weight-400 line-height-24 margin-bottom-24 whiteColor"
                 >
                   Hello Customer Name,
                 </p>
+
                 <p
-                  class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 whiteColor"
+                  class="w-65 font-size-16 font-weight-400 line-height-24 margin-bottom-24 whiteColor"
                 >
-                  Thank you for joining Apex Auto! Start exploring these
-                  powerful features and benefits available to you right now:
+                  We're excited to introduce you to the Apex Auto app, your
+                  ticket to a hassle-free auto repair experience, and we're
+                  reaching out because your auto repair shop has created a
+                  customer profile for you within our platform. Here's what
+                  you'll enjoy:
                 </p>
-                <!-- Box design  -->
+
                 <table
-                  align="center"
                   width="100%"
                   cellpadding="0"
                   border="0"
@@ -271,15 +313,22 @@
                       >
                         <div class="card">
                           <img
-                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/quicklyDiagnoseImage.png"
+                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/appointmentImage.png"
                             alt="img"
                             class="card-img"
                           />
                           <p
-                            class="font-size-16 font-weight-400 card-title line-height-24"
+                            style="margin-top: 12px"
+                            class="font-size-18 font-weight-700 line-height-24"
                           >
-                            Send pictures of your car problems directly to your
-                            mechanic for faster troubleshooting.
+                            Effortless Appointments
+                          </p>
+                          <p
+                            style="margin-top: 4px"
+                            class="font-size-16 font-weight-400 line-height-24"
+                          >
+                            Book anytime, anywhere – no more phone <br />
+                            calls needed.
                           </p>
                         </div>
                       </td>
@@ -295,16 +344,22 @@
                       >
                         <div class="card">
                           <img
-                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/priceServiceImage.png"
+                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/chatImage.png"
                             alt="img"
                             class="card-img"
                           />
-
                           <p
-                            class="font-size-16 font-weight-400 card-title line-height-24"
+                            style="margin-top: 12px"
+                            class="font-size-18 font-weight-700 line-height-24"
                           >
-                            Message shops to ask about pricing or specific
-                            services they offer.
+                            Chat with your mechanic
+                          </p>
+                          <p
+                            style="margin-top: 4px"
+                            class="font-size-16 font-weight-400 line-height-24"
+                          >
+                            Have questions or want to stay informed?<br />
+                            Connect with your mechanic in real time.
                           </p>
                         </div>
                       </td>
@@ -313,7 +368,6 @@
                 </table>
 
                 <table
-                  align="center"
                   width="100%"
                   cellpadding="0"
                   border="0"
@@ -333,16 +387,23 @@
                       >
                         <div class="card">
                           <img
-                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/exploreShop.png"
+                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/bellImage.png"
                             alt="img"
                             class="card-img"
                           />
-
                           <p
-                            class="font-size-16 font-weight-400 card-title line-height-24"
+                            style="margin-top: 12px"
+                            class="font-size-18 font-weight-700 line-height-24"
                           >
-                            View photos and details about the shop’s facilities
-                            before booking.
+                            Appointment Updates
+                          </p>
+                          <p
+                            style="margin-top: 4px"
+                            class="font-size-16 font-weight-400 line-height-24"
+                          >
+                            Stay in the loop with real-time notifications<br />
+                            for your appointments – from booking to <br />
+                            pick up.
                           </p>
                         </div>
                       </td>
@@ -358,16 +419,27 @@
                       >
                         <div class="card">
                           <img
-                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/specialityShopImage.png"
+                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/invoiceImage.png"
                             alt="img"
                             class="card-img"
                           />
-
                           <p
-                            class="font-size-16 font-weight-400 card-title line-height-24"
+                            style="margin-top: 12px"
+                            class="font-size-18 font-weight-700 line-height-24"
                           >
-                            Locate repair shops that specialize in your specific
-                            car make or model.
+                            Eco-Friendly Invoices
+                          </p>
+                          <p
+                            style="margin-top: 4px"
+                            class="font-size-16 font-weight-400 line-height-24"
+                          >
+                            Say goodbye to paper – electronic<br
+                              class="hide-on-small"
+                            />
+                            estimates and invoices are now at your<br
+                              class="hide-on-small"
+                            />
+                            fingertips.
                           </p>
                         </div>
                       </td>
@@ -378,25 +450,117 @@
                 <p
                   class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 whiteColor"
                 >
-                  Take the hassle out of car service today. Your next
-                  appointment is just a few taps away!
-                </p>
-
-                <!-- Button Section -->
-                <a href="#" class="button">OPEN APEX AUTO</a>
-
-                <p
-                  class="font-size-16 margin-top-24 font-weight-400 line-height-24 whiteColor"
-                >
-                  If you have any questions or need assistance, please reply
-                  back to this email. We’re here to help!
+                  Experience auto repair like never before. Simply download Apex
+                  Auto and login in to your account using credentials provided
+                  below and take control of your vehicle's well-being.
                 </p>
 
                 <p
-                  class="font-size-16 margin-top-24 font-weight-400 line-height-24 whiteColor"
+                  class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 whiteColor"
                 >
-                  Best regards,<br />
-                  The Apex Auto Team
+                  There is no cost to using Apex Auto, as it is completely free.
+                </p>
+
+                <div class="divider margin-top-24 margin-bottom-24"></div>
+
+                <table
+                  width="100%"
+                  cellpadding="0"
+                  border="0"
+                  class="margin-bottom-24"
+                >
+                  <tbody style="width: 100%">
+                    <tr style="width: 100%">
+                      <!-- Column 1 -->
+                      <td
+                        style="
+                          box-sizing: content-box;
+                          vertical-align: middle;
+                          padding-right: 0;
+                        "
+                        class="grid-col"
+                      >
+                        <div class="card-2">
+                          <p
+                            class="font-size-16 font-weight-400 line-height-24"
+                          >
+                            Email
+                          </p>
+                          <p
+                            class="font-size-18 font-weight-700 line-height-24"
+                          >
+                            minahil003@gmail.com
+                          </p>
+                        </div>
+                      </td>
+                      <!-- Column 2 -->
+                      <td
+                        style="
+                          box-sizing: content-box;
+                          vertical-align: middle;
+                          padding-left: 12px;
+                          padding-right: 0;
+                        "
+                        class="grid-col"
+                      >
+                        <div class="card-2 mt-12">
+                          <p
+                            class="font-size-16 font-weight-400 line-height-24"
+                          >
+                            Password
+                          </p>
+                          <p
+                            class="font-size-18 font-weight-700 line-height-24"
+                          >
+                            Hello@123
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table
+                  align="center"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  class="margin-top-24 hide-on-small"
+                >
+                  <tr align="center">
+                    <td align="center">
+                      <a href="#" class="button">DOWNLOAD APEX AUTO</a>
+                    </td>
+                  </tr>
+                </table>
+
+                <a href="#" class="button hide-on-desktop"
+                  >DOWNLOAD APEX AUTO</a
+                >
+
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 margin-top-24 margin-bottom-24 whiteColor"
+                >
+                  If you have any trouble logging in, please email us
+                  immediately at
+                  <a
+                    href="mailto:support@apexmechanic.com"
+                    style="
+                      font-weight: 500;
+                      text-decoration: none;
+                      color: #75dbff;
+                    "
+                    class="link"
+                  >
+                    support@apexautoapp.com</a
+                  >
+                </p>
+
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 whiteColor"
+                >
+                  Kind Regards, <br />
+                  Apex Auto Team
                 </p>
               </td>
             </tr>
