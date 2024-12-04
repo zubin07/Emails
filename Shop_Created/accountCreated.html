@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* General Reset */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        font-family: "Roboto", Arial, sans-serif;
+      }
+
+      table {
+        border-spacing: 0;
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      td {
+        padding: 0;
+      }
+      h1 {
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+      .blackColor {
+        color: #000;
+      }
+      .whiteColor {
+        color: #fff;
+      }
+      .logo {
+        width: 243px;
+        height: 153px;
+        object-fit: cover;
+      }
+      /* Reusable Classes */
+      .padding-3-48 {
+        padding: 48px 0 0 48px;
+      }
+      .padding-48 {
+        padding: 48px;
+      }
+      .margin-bottom-24 {
+        margin-bottom: 24px;
+      }
+      .padding-bottom-24 {
+        padding-bottom: 24px;
+      }
+      .margin-top-24 {
+        margin-top: 24px;
+      }
+
+      .font-size-16 {
+        font-size: 16px;
+      }
+
+      .font-size-34 {
+        font-size: 34px;
+      }
+
+      .font-weight-400 {
+        font-weight: 400;
+      }
+
+      .font-weight-700 {
+        font-weight: 700;
+      }
+
+      .line-height-24 {
+        line-height: 24px;
+      }
+
+      .line-height-42 {
+        line-height: 41.99px;
+      }
+
+      .button {
+        display: inline-block;
+        background-color: #ffffff;
+        color: #000 !important;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500 !important;
+        padding: 12px 22px;
+        border-radius: 4px;
+        margin-right: 24px;
+        letter-spacing: 0.46px;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.12),
+          0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+          0px 3px 1px -2px rgba(0, 0, 0, 0.2);
+      }
+
+      .divider {
+        width: 100%;
+        color: #cecece;
+        background-color: #cecece;
+        height: 1px;
+      }
+      .grid-col {
+        width: 100%;
+        display: table-cell;
+      }
+      .card {
+        width: 323px;
+        border-radius: 8px;
+        background: #f1f1f1;
+        padding: 16px;
+      }
+      .card-img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+      }
+      .card-title {
+        margin-top: 10px;
+        padding: 0 33px;
+
+        text-align: center;
+        letter-spacing: 0.15px;
+      }
+
+      /* .left-section {
+        width: calc(100% - 347px);
+      }
+      .right-section {
+        width: 347px;
+      } */
+      /* .mobileImg {
+        width: 347px;
+        height: 459px;
+      }
+      .visible-desktop {
+        display: block;
+      } */
+      /* Responsive Styling */
+      .link {
+        color: #75dbff;
+      }
+      @media only screen and (max-width: 600px) {
+        .logo {
+          width: 200px !important;
+          height: 120px !important;
+        }
+        .font-size-34 {
+          font-size: 25px !important;
+        }
+        .font-size-16 {
+          font-size: 14px !important;
+        }
+        .content-table {
+          width: 100% !important;
+        }
+
+        .padding-48 {
+          padding: 20px !important;
+        }
+        .margin-bottom-24 {
+          margin-bottom: 16px !important;
+        }
+        .padding-bottom-24 {
+          padding-bottom: 16px !important;
+        }
+        .margin-top-24 {
+          margin-top: 16px !important;
+        }
+        .button {
+          padding: 10px 22px !important;
+          display: table-cell !important;
+          width: 100% !important;
+        }
+        .card-title {
+          padding: 0 47px;
+        }
+      }
+      /* Responsive Styling */
+      @media only screen and (max-width: 480px) {
+        .visible-desktop {
+          display: none;
+        }
+        .left-section {
+          width: 100%;
+        }
+        .right-section {
+          width: 202px;
+        }
+        .mobileImg {
+          width: 202px;
+          height: 267px;
+        }
+        .grid-col {
+          width: 100% !important; /* Stacks the columns on smaller screens */
+          display: inline;
+          padding-right: 0;
+          padding-left: 0;
+        }
+        .logo {
+          width: 165px !important;
+          height: 100px !important;
+        }
+        .margin-bottom-24 {
+          margin-bottom: 12px !important;
+        }
+        .padding-bottom-24 {
+          padding-bottom: 12px !important;
+        }
+        .margin-top-24 {
+          margin-top: 12px !important;
+        }
+        .font-size-34 {
+          font-size: 22px !important;
+        }
+        .font-size-16 {
+          font-size: 12px !important;
+        }
+        .line-height-42 {
+          line-height: 24px !important;
+        }
+        .line-height-24 {
+          line-height: 18px !important;
+        }
+        .button {
+          display: table-cell !important;
+          width: 85% !important;
+          text-align: center !important;
+        }
+        .card-title {
+          padding: 0 64px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table
+      align="center"
+      width="829px"
+      style="margin: 0 auto; width: 829px; background-color: #002394"
+      role="presentation"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+    >
+      <tr>
+        <td class="padding-48">
+          <!-- Main Container -->
+          <table
+            width="600"
+            bgcolor="#002394"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+          >
+            <tr>
+              <td>
+                <!-- Logo Section -->
+                <img
+                  src="https://d2bfmrbcxsoz8o.cloudfront.net/campaign/apex-mechanic.png"
+                  alt="Apex Mechanic Logo"
+                  class="margin-bottom-24 logo"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h1
+                  class="font-size-34 font-weight-400 line-height-42 margin-bottom-24 whiteColor"
+                >
+                  Account Created - Apex Auto
+                </h1>
+
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 whiteColor"
+                >
+                  Hello Customer Name,
+                </p>
+
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 whiteColor"
+                >
+                  We're excited to introduce you to the Apex Auto app, your
+                  ticket to a hassle-free auto repair experience, and we're
+                  reaching out because your auto repair shop has created a
+                  customer profile for you within our platform. Here's what
+                  you'll enjoy:
+                </p>
+
+                <table
+                  width="100%"
+                  cellpadding="0"
+                  border="0"
+                  class="margin-bottom-24"
+                >
+                  <tbody style="width: 100%">
+                    <tr style="width: 100%">
+                      <!-- Column 1 -->
+                      <td
+                        style="
+                          box-sizing: content-box;
+                          vertical-align: middle;
+                          padding-left: 0;
+                          padding-right: 12px;
+                        "
+                        class="grid-col"
+                      >
+                        <div class="card">
+                          <img
+                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/appointmentImage.png"
+                            alt="img"
+                            class="card-img"
+                          />
+                          <p
+                            style="margin-top: 12px"
+                            class="font-size-18 font-weight-700 line-height-24"
+                          >
+                            Effortless Appointments
+                          </p>
+                          <p
+                            style="margin-top: 4px"
+                            class="font-size-16 font-weight-400 line-height-24"
+                          >
+                            Book anytime, anywhere – no more phone <br />
+                            calls needed.
+                          </p>
+                        </div>
+                      </td>
+                      <!-- Column 2 -->
+                      <td
+                        style="
+                          box-sizing: content-box;
+                          vertical-align: middle;
+                          padding-left: 12px;
+                          padding-right: 0;
+                        "
+                        class="grid-col"
+                      >
+                        <div class="card">
+                          <img
+                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/chatImage.png"
+                            alt="img"
+                            class="card-img"
+                          />
+                          <p
+                            style="margin-top: 12px"
+                            class="font-size-18 font-weight-700 line-height-24"
+                          >
+                            Chat with your mechanic
+                          </p>
+                          <p
+                            style="margin-top: 4px"
+                            class="font-size-16 font-weight-400 line-height-24"
+                          >
+                            Have questions or want to stay informed?<br />
+                            Connect with your mechanic in real time.
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table
+                  width="100%"
+                  cellpadding="0"
+                  border="0"
+                  class="margin-bottom-24"
+                >
+                  <tbody style="width: 100%">
+                    <tr style="width: 100%">
+                      <!-- Column 1 -->
+                      <td
+                        style="
+                          box-sizing: content-box;
+                          vertical-align: middle;
+                          padding-left: 0;
+                          padding-right: 12px;
+                        "
+                        class="grid-col"
+                      >
+                        <div class="card">
+                          <img
+                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/bellImage.png"
+                            alt="img"
+                            class="card-img"
+                          />
+                          <p
+                            style="margin-top: 12px"
+                            class="font-size-18 font-weight-700 line-height-24"
+                          >
+                            Appointment Updates
+                          </p>
+                          <p
+                            style="margin-top: 4px"
+                            class="font-size-16 font-weight-400 line-height-24"
+                          >
+                            Stay in the loop with real-time notifications<br />
+                            for your appointments – from booking to pick<br />
+                            up.
+                          </p>
+                        </div>
+                      </td>
+                      <!-- Column 2 -->
+                      <td
+                        style="
+                          box-sizing: content-box;
+                          vertical-align: middle;
+                          padding-left: 12px;
+                          padding-right: 0;
+                        "
+                        class="grid-col"
+                      >
+                        <div class="card">
+                          <img
+                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/invoiceImage.png"
+                            alt="img"
+                            class="card-img"
+                          />
+                          <p
+                            style="margin-top: 12px"
+                            class="font-size-18 font-weight-700 line-height-24"
+                          >
+                            Eco-Friendly Invoices
+                          </p>
+                          <p
+                            style="margin-top: 4px"
+                            class="font-size-16 font-weight-400 line-height-24"
+                          >
+                            Say goodbye to paper – electronic<br />
+                            estimates and invoices are now at your<br />
+                            fingertips.
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 whiteColor"
+                >
+                  Experience auto repair like never before. Simply download Apex
+                  Auto and login in to your account using credentials provided
+                  below and take control of your vehicle's well-being.
+                </p>
+
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 whiteColor"
+                >
+                  There is no cost to using Apex Auto, as it is completely free.
+                </p>
+
+                <div class="divider margin-top-24 margin-bottom-24"></div>
+
+                <table
+                  width="100%"
+                  cellpadding="0"
+                  border="0"
+                  class="margin-bottom-24"
+                >
+                  <tbody style="width: 100%">
+                    <tr style="width: 100%">
+                      <!-- Column 1 -->
+                      <td
+                        style="
+                          box-sizing: content-box;
+                          vertical-align: middle;
+                          padding-left: 12px;
+                          padding-right: 0;
+                        "
+                        class="grid-col"
+                      >
+                        <div class="card">
+                          <p
+                            class="font-size-16 font-weight-400 line-height-24"
+                          >
+                            Email
+                          </p>
+                          <p
+                            class="font-size-18 font-weight-700 line-height-24"
+                          >
+                            minahil003@gmail.com
+                          </p>
+                        </div>
+                      </td>
+                      <!-- Column 2 -->
+                      <td
+                        style="
+                          box-sizing: content-box;
+                          vertical-align: middle;
+                          padding-left: 12px;
+                          padding-right: 0;
+                        "
+                        class="grid-col"
+                      >
+                        <div class="card">
+                          <p
+                            class="font-size-16 font-weight-400 line-height-24"
+                          >
+                            Password
+                          </p>
+                          <p
+                            class="font-size-18 font-weight-700 line-height-24"
+                          >
+                            Hello@123
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table
+                  align="center"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  class="margin-top-24"
+                >
+                  <tr align="center">
+                    <td align="center">
+                      <a href="#" class="button">OPEN APEX AUTO</a>
+                    </td>
+                  </tr>
+                </table>
+
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 margin-top-24 margin-bottom-24 whiteColor"
+                >
+                  If you have any trouble logging in, please email us
+                  immediately at
+                  <a
+                    href="mailto:support@apexmechanic.com"
+                    style="
+                      font-weight: 500;
+                      text-decoration: none;
+                      color: #75dbff;
+                    "
+                    class="link"
+                  >
+                    support@apexautoapp.com</a
+                  >
+                </p>
+
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 whiteColor"
+                >
+                  Kind Regards, <br />
+                  Apex Auto Team
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

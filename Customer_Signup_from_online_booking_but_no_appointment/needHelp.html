@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <style>
+      /* General Reset */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+      :root {
+        color-scheme: light dark;
+        supported-color-schemes: light dark;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #fff;
+        font-family: "Roboto", Arial, sans-serif;
+      }
+
+      table {
+        border-spacing: 0;
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      td {
+        padding: 0;
+      }
+      h1 {
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+      .blackColor {
+        color: #000;
+      }
+      .whiteColor {
+        color: #fff;
+      }
+      .logo {
+        width: 243px;
+        height: 153px;
+        object-fit: cover;
+      }
+      /* Reusable Classes */
+      .padding-48 {
+        padding: 48px;
+      }
+      .margin-bottom-24 {
+        margin-bottom: 24px;
+      }
+      .padding-bottom-24 {
+        padding-bottom: 24px;
+      }
+      .margin-top-24 {
+        margin-top: 24px;
+      }
+
+      .font-size-16 {
+        font-size: 16px;
+      }
+
+      .font-size-34 {
+        font-size: 34px;
+      }
+
+      .font-weight-400 {
+        font-weight: 400;
+      }
+
+      .font-weight-700 {
+        font-weight: 700;
+      }
+
+      .line-height-24 {
+        line-height: 24px;
+      }
+
+      .line-height-42 {
+        line-height: 41.99px;
+      }
+
+      .button {
+        display: inline-block;
+        background: #002394 !important;
+        color: #ffffff !important;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 8px 22px;
+        border-radius: 4px;
+        margin-right: 24px;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.12),
+          0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+          0px 3px 1px -2px rgba(0, 0, 0, 0.2);
+      }
+
+      .divider {
+        width: 100%;
+        color: #cecece;
+        background-color: #cecece;
+        height: 1px;
+      }
+
+      .card {
+        border-radius: 8px;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+      .linkUnderline {
+        color: #002fff;
+        font-weight: 700;
+        text-decoration-line: underline;
+        cursor: pointer;
+      }
+
+      /* Responsive Styling */
+      @media only screen and (max-width: 600px) {
+        .logo {
+          width: 200px !important;
+          height: 120px !important;
+        }
+        .font-size-34 {
+          font-size: 25px !important;
+        }
+        .font-size-16 {
+          font-size: 14px !important;
+        }
+        .content-table {
+          width: 100% !important;
+        }
+
+        .padding-48 {
+          padding: 20px !important;
+        }
+        .margin-bottom-24 {
+          margin-bottom: 16px !important;
+        }
+        .padding-bottom-24 {
+          padding-bottom: 16px !important;
+        }
+        .margin-top-24 {
+          margin-top: 16px !important;
+        }
+        .button {
+          display: inline !important;
+          width: 100% !important;
+          margin-right: 24px !important;
+          margin-bottom: 10px !important;
+        }
+      }
+      /* Responsive Styling */
+      @media only screen and (max-width: 400px) {
+        .logo {
+          width: 165px !important;
+          height: 100px !important;
+        }
+        .margin-bottom-24 {
+          margin-bottom: 12px !important;
+        }
+        .padding-bottom-24 {
+          padding-bottom: 12px !important;
+        }
+        .margin-top-24 {
+          margin-top: 12px !important;
+        }
+        .font-size-34 {
+          font-size: 22px !important;
+        }
+        .font-size-16 {
+          font-size: 12px !important;
+        }
+        .line-height-42 {
+          line-height: 24px !important;
+        }
+        .line-height-24 {
+          line-height: 18px !important;
+        }
+        .button {
+          display: inline-block !important;
+          width: 85% !important;
+          margin-right: 0 !important;
+          margin-bottom: 10px !important;
+          text-align: center !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table
+      align="center"
+      width="100%"
+      style="margin: 0 auto; max-width: 829px; background-color: #002394"
+      role="presentation"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+    >
+      <tr>
+        <td class="padding-48">
+          <!-- Main Container -->
+          <table
+            width="600"
+            bgcolor="#002394"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            class="content-table"
+          >
+            <tr>
+              <td>
+                <!-- Logo Section -->
+                <img
+                  src="https://d2bfmrbcxsoz8o.cloudfront.net/campaign/apex-mechanic.png"
+                  alt="Apex Mechanic Logo"
+                  class="margin-bottom-24 logo"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <!-- Content Section -->
+                <h1
+                  class="font-size-34 font-weight-400 line-height-42 margin-bottom-24 whiteColor"
+                >
+                  Need Help Booking?
+                </h1>
+
+                <div class="card">
+                  <p
+                    class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 blackColor"
+                  >
+                    Hello [Customer Name],
+                  </p>
+
+                  <p
+                    class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 blackColor"
+                  >
+                    Thank you for signing up for an account with Apex Auto! We
+                    noticed you haven’t booked your first appointment yet, and
+                    we wanted to check in and see if you need any assistance.
+                  </p>
+
+                  <p
+                    class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 blackColor"
+                  >
+                    If you’re having trouble finding a repair shop, selecting a
+                    service, or need guidance on how to book, we’re here to
+                    help! Simply reply to this email, and we’ll walk you through
+                    the process
+                  </p>
+
+                  <p
+                    class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 blackColor"
+                  >
+                    To get started, you can explore top rated repair shops and
+                    book your appointment here:<br />
+                    <a href="#" class="linkUnderline"
+                      >Find a Repair Shop and Book Now</a
+                    >
+                  </p>
+
+                  <p
+                    class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 blackColor"
+                  >
+                    We’re excited to help you get your car serviced with ease!
+                  </p>
+
+                  <p
+                    class="font-size-16 font-weight-400 line-height-24 blackColor"
+                  >
+                    Kind Regards, <br />
+                    The Apex Auto Team
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

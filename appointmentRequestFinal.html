@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* General Reset */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        font-family: "Roboto", Arial, sans-serif;
+      }
+
+      table {
+        border-spacing: 0;
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      td {
+        padding: 0;
+      }
+      h1 {
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+      .blackColor {
+        color: #000;
+      }
+      .logo {
+        width: 243px;
+        height: 153px;
+        object-fit: cover;
+      }
+      /* Reusable Classes */
+      .padding-48 {
+        padding: 48px;
+      }
+      .margin-bottom-24 {
+        margin-bottom: 24px;
+      }
+      .padding-bottom-24 {
+        padding-bottom: 24px;
+      }
+      .margin-top-24 {
+        margin-top: 24px;
+      }
+
+      .font-size-16 {
+        font-size: 16px;
+      }
+
+      .font-size-34 {
+        font-size: 34px;
+      }
+
+      .font-weight-400 {
+        font-weight: 400;
+      }
+
+      .font-weight-700 {
+        font-weight: 700;
+      }
+
+      .line-height-24 {
+        line-height: 24px;
+      }
+
+      .line-height-42 {
+        line-height: 41.99px;
+      }
+
+      .button {
+        display: inline-block;
+        background: #002394 !important;
+        color: #ffffff !important;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 8px 22px;
+        border-radius: 4px;
+        margin-right: 24px;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.12),
+          0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+          0px 3px 1px -2px rgba(0, 0, 0, 0.2);
+      }
+
+      .divider {
+        width: 100%;
+        color: #cecece;
+        background-color: #cecece;
+        height: 1px;
+      }
+
+      /* Responsive Styling */
+      @media only screen and (max-width: 600px) {
+        .logo {
+          width: 200px !important;
+          height: 120px !important;
+        }
+        .font-size-34 {
+          font-size: 25px !important;
+        }
+        .font-size-16 {
+          font-size: 14px !important;
+        }
+        .content-table {
+          width: 100% !important;
+        }
+
+        .padding-48 {
+          padding: 20px !important;
+        }
+        .margin-bottom-24 {
+          margin-bottom: 16px !important;
+        }
+        .padding-bottom-24 {
+          padding-bottom: 16px !important;
+        }
+        .margin-top-24 {
+          margin-top: 16px !important;
+        }
+        .button {
+          display: inline !important;
+          width: 100% !important;
+          margin-right: 24px !important;
+          margin-bottom: 10px !important;
+        }
+      }
+      /* Responsive Styling */
+      @media only screen and (max-width: 400px) {
+        .logo {
+          width: 165px !important;
+          height: 100px !important;
+        }
+        .margin-bottom-24 {
+          margin-bottom: 12px !important;
+        }
+        .padding-bottom-24 {
+          padding-bottom: 12px !important;
+        }
+        .margin-top-24 {
+          margin-top: 12px !important;
+        }
+        .font-size-34 {
+          font-size: 22px !important;
+        }
+        .font-size-16 {
+          font-size: 12px !important;
+        }
+        .line-height-42 {
+          line-height: 24px !important;
+        }
+        .line-height-24 {
+          line-height: 18px !important;
+        }
+        .button {
+          display: inline-block !important;
+          width: 85% !important;
+          margin-right: 0 !important;
+          margin-bottom: 10px !important;
+          text-align: center !important;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .button {
+          background-color: #002394 !important;
+          color: #ffffff !important;
+          /* White text in Dark Mode */
+        }
+
+        .link {
+          color: #008 !important;
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+        .button {
+          background-color: #002394 !important;
+          color: #ffffff !important;
+          /* Black text in Light Mode */
+        }
+
+        .link {
+          color: #008 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table
+      align="center"
+      width="100%"
+      style="margin: 0 auto; max-width: 700px; background-color: #ffffff"
+      role="presentation"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+    >
+      <tr>
+        <td class="padding-48">
+          <!-- Main Container -->
+          <table
+            width="600"
+            bgcolor="#ffffff"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            class="content-table"
+          >
+            <tr>
+              <td>
+                <!-- Logo Section -->
+                <img
+                  src="https://d2bfmrbcxsoz8o.cloudfront.net/campaign/apex-mechanic.png"
+                  alt="Apex Mechanic Logo"
+                  class="margin-bottom-24 logo"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <!-- Content Section -->
+                <h1
+                  class="font-size-34 font-weight-400 line-height-42 margin-bottom-24 blackColor"
+                >
+                  Final Reminder - Appointment Request
+                </h1>
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 blackColor"
+                >
+                  Hello Shop Owner,
+                </p>
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 blackColor"
+                >
+                  This is your final reminder to confirm or manage the following
+                  appointment request. The drop-off time is approaching, and
+                  prompt action is needed to ensure the best experience for your
+                  customer.
+                </p>
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 blackColor"
+                >
+                  This appointment request will expire in
+                  <strong class="font-weight-700">4 hours</strong> if no action
+                  is taken.
+                </p>
+                <table
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                >
+                  <tr>
+                    <td
+                      class="font-size-16 font-weight-400 line-height-24"
+                      style="color: #000000a3"
+                    >
+                      Customer Name
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="font-size-16 font-weight-400 line-height-24 padding-bottom-24 blackColor"
+                    >
+                      Momin Sheikh
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="font-size-16 font-weight-400 line-height-24"
+                      style="color: #000000a3"
+                    >
+                      Drop Off Date
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="font-size-16 font-weight-400 line-height-24 paadding-bottom-24 blackColor"
+                    >
+                      Jan 23, 2023
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="font-size-16 font-weight-400 line-height-24"
+                      style="color: #000000a3"
+                    >
+                      Vehicle Information
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="font-size-16 font-weight-400 line-height-24 padding-bottom-24 blackColor"
+                    >
+                      2023 Audi Q5 Premium Plus
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="font-size-16 font-weight-400 line-height-24"
+                      style="color: #000000a3"
+                    >
+                      Service Requested
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 blackColor"
+                    >
+                      Oil Change
+                    </td>
+                  </tr>
+                </table>
+
+                <div class="divider margin-top-24"></div>
+
+                <!-- Button Section -->
+                <table
+                  align="center"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  class="margin-top-24"
+                  style="height: 34px"
+                >
+                  <tr>
+                    <td>
+                      <a href="#" class="button" style="color: #fff !important"
+                        >OPEN MOBILE</a
+                      >
+                      <a href="#" class="button" style="color: #fff !important"
+                        >OPEN WEB</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 margin-top-24 margin-bottom-24 blackColor"
+                >
+                  If you have any trouble logging in, please email us
+                  immediately at
+                  <a
+                    href="mailto:support@apexmechanic.com"
+                    style="
+                      color: #008 !important;
+                      font-weight: 500;
+                      text-decoration: none;
+                    "
+                    >support@apexmechanic.com</a
+                  >
+                  or call us at 905-867-1969.
+                </p>
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 blackColor"
+                >
+                  Kind Regards, <br />
+                  Apex Mechanic Team
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

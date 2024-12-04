@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* General Reset */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        font-family: "Roboto", Arial, sans-serif;
+      }
+
+      table {
+        border-spacing: 0;
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      td {
+        padding: 0;
+      }
+      h1 {
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+      .blackColor {
+        color: #000;
+      }
+      .whiteColor {
+        color: #fff;
+      }
+      .logo {
+        width: 243px;
+        height: 153px;
+        object-fit: cover;
+      }
+      /* Reusable Classes */
+      .padding-48 {
+        padding: 48px;
+      }
+      .margin-bottom-24 {
+        margin-bottom: 24px;
+      }
+      .padding-bottom-24 {
+        padding-bottom: 24px;
+      }
+      .margin-top-24 {
+        margin-top: 24px;
+      }
+
+      .font-size-16 {
+        font-size: 16px;
+      }
+
+      .font-size-34 {
+        font-size: 34px;
+      }
+
+      .font-weight-400 {
+        font-weight: 400;
+      }
+
+      .font-weight-700 {
+        font-weight: 700;
+      }
+
+      .line-height-24 {
+        line-height: 24px;
+      }
+
+      .line-height-42 {
+        line-height: 41.99px;
+      }
+
+      .button {
+        display: inline-block;
+        background-color: #ffffff;
+        color: #000 !important;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500 !important;
+        padding: 12px 22px;
+        border-radius: 4px;
+        margin-right: 24px;
+        letter-spacing: 0.46px;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.12),
+          0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+          0px 3px 1px -2px rgba(0, 0, 0, 0.2);
+      }
+
+      .divider {
+        width: 100%;
+        color: #cecece;
+        background-color: #cecece;
+        height: 1px;
+      }
+      .grid-col {
+        width: 100%;
+        display: table-cell;
+      }
+      .card {
+        width: 323px;
+        border-radius: 8px;
+        background: #f1f1f1;
+        padding: 16px;
+      }
+      .card-img {
+        width: 100%;
+        height: 44px;
+        object-fit: contain;
+      }
+      .card-title {
+        margin-top: 10px;
+        padding: 0 33px;
+
+        text-align: center;
+        letter-spacing: 0.15px;
+      }
+
+      /* Responsive Styling */
+      @media only screen and (max-width: 600px) {
+        .logo {
+          width: 200px !important;
+          height: 120px !important;
+        }
+        .font-size-34 {
+          font-size: 25px !important;
+        }
+        .font-size-16 {
+          font-size: 14px !important;
+        }
+        .content-table {
+          width: 100% !important;
+        }
+
+        .padding-48 {
+          padding: 20px !important;
+        }
+        .margin-bottom-24 {
+          margin-bottom: 16px !important;
+        }
+        .padding-bottom-24 {
+          padding-bottom: 16px !important;
+        }
+        .margin-top-24 {
+          margin-top: 16px !important;
+        }
+        .button {
+          padding: 10px 22px !important;
+          display: table-cell !important;
+          width: 100% !important;
+        }
+        .card-title {
+          padding: 0 47px;
+        }
+      }
+      /* Responsive Styling */
+      @media only screen and (max-width: 400px) {
+        .grid-col {
+          width: 100% !important; /* Stacks the columns on smaller screens */
+          display: inline;
+          padding-right: 0;
+          padding-left: 0;
+        }
+        .logo {
+          width: 165px !important;
+          height: 100px !important;
+        }
+        .margin-bottom-24 {
+          margin-bottom: 12px !important;
+        }
+        .padding-bottom-24 {
+          padding-bottom: 12px !important;
+        }
+        .margin-top-24 {
+          margin-top: 12px !important;
+        }
+        .font-size-34 {
+          font-size: 22px !important;
+        }
+        .font-size-16 {
+          font-size: 12px !important;
+        }
+        .line-height-42 {
+          line-height: 24px !important;
+        }
+        .line-height-24 {
+          line-height: 18px !important;
+        }
+        .button {
+          display: table-cell !important;
+          width: 85% !important;
+          text-align: center !important;
+        }
+        .card-title {
+          padding: 0 64px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table
+      align="center"
+      width="829px"
+      style="margin: 0 auto; width: 829px; background-color: #002394"
+      role="presentation"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+    >
+      <tr>
+        <td class="padding-48">
+          <!-- Main Container -->
+          <table
+            width="600"
+            bgcolor="#002394"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            class="content-table"
+          >
+            <tr>
+              <td>
+                <!-- Logo Section -->
+                <img
+                  src="https://d2bfmrbcxsoz8o.cloudfront.net/campaign/apex-mechanic.png"
+                  alt="Apex Mechanic Logo"
+                  class="margin-bottom-24 logo"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <!-- Content Section -->
+                <h1
+                  class="font-size-34 font-weight-400 line-height-42 margin-bottom-24 whiteColor"
+                >
+                  Get the Most Out of the Apex Auto App
+                </h1>
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 whiteColor"
+                >
+                  Hello Customer Name,
+                </p>
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 whiteColor"
+                >
+                  Thank you for joining Apex Auto! Start exploring these
+                  powerful features and benefits available to you right now:
+                </p>
+                <!-- Box design  -->
+                <table
+                  align="center"
+                  width="100%"
+                  cellpadding="0"
+                  border="0"
+                  class="margin-bottom-24"
+                >
+                  <tbody style="width: 100%">
+                    <tr style="width: 100%">
+                      <!-- Column 1 -->
+                      <td
+                        style="
+                          box-sizing: content-box;
+                          vertical-align: middle;
+                          padding-left: 0;
+                          padding-right: 12px;
+                        "
+                        class="grid-col"
+                      >
+                        <div class="card">
+                          <img
+                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/quicklyDiagnoseImage.png"
+                            alt="img"
+                            class="card-img"
+                          />
+                          <p
+                            class="font-size-16 font-weight-400 card-title line-height-24"
+                          >
+                            Send pictures of your car problems directly to your
+                            mechanic for faster troubleshooting.
+                          </p>
+                        </div>
+                      </td>
+                      <!-- Column 2 -->
+                      <td
+                        style="
+                          box-sizing: content-box;
+                          vertical-align: middle;
+                          padding-left: 12px;
+                          padding-right: 0;
+                        "
+                        class="grid-col"
+                      >
+                        <div class="card">
+                          <img
+                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/priceServiceImage.png"
+                            alt="img"
+                            class="card-img"
+                          />
+
+                          <p
+                            class="font-size-16 font-weight-400 card-title line-height-24"
+                          >
+                            Message shops to ask about pricing or specific
+                            services they offer.
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table
+                  align="center"
+                  width="100%"
+                  cellpadding="0"
+                  border="0"
+                  class="margin-bottom-24"
+                >
+                  <tbody style="width: 100%">
+                    <tr style="width: 100%">
+                      <!-- Column 1 -->
+                      <td
+                        style="
+                          box-sizing: content-box;
+                          vertical-align: middle;
+                          padding-left: 0;
+                          padding-right: 12px;
+                        "
+                        class="grid-col"
+                      >
+                        <div class="card">
+                          <img
+                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/exploreShop.png"
+                            alt="img"
+                            class="card-img"
+                          />
+
+                          <p
+                            class="font-size-16 font-weight-400 card-title line-height-24"
+                          >
+                            View photos and details about the shop’s facilities
+                            before booking.
+                          </p>
+                        </div>
+                      </td>
+                      <!-- Column 2 -->
+                      <td
+                        style="
+                          box-sizing: content-box;
+                          vertical-align: middle;
+                          padding-left: 12px;
+                          padding-right: 0;
+                        "
+                        class="grid-col"
+                      >
+                        <div class="card">
+                          <img
+                            src="https://apexauto-development.s3.ca-central-1.amazonaws.com/logos/specialityShopImage.png"
+                            alt="img"
+                            class="card-img"
+                          />
+
+                          <p
+                            class="font-size-16 font-weight-400 card-title line-height-24"
+                          >
+                            Locate repair shops that specialize in your specific
+                            car make or model.
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p
+                  class="font-size-16 font-weight-400 line-height-24 margin-bottom-24 whiteColor"
+                >
+                  Say goodbye to being put on hold on the phone. Book your
+                  appointment in seconds with the Apex Auto app and enjoy a
+                  superior car care experience.
+                </p>
+
+                <!-- Button Section -->
+                <a href="#" class="button">OPEN APEX AUTO</a>
+
+                <p
+                  class="font-size-16 margin-top-24 font-weight-400 line-height-24 whiteColor"
+                >
+                  If you have any questions or need assistance, please reply
+                  back to this email. We’re here to help!
+                </p>
+
+                <p
+                  class="font-size-16 margin-top-24 font-weight-400 line-height-24 whiteColor"
+                >
+                  Kind Regards, <br />
+                  The Apex Auto Team
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
